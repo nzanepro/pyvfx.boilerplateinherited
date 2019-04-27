@@ -14,12 +14,8 @@ except ImportError:
 
 
 def activate(dockable=False):
-    if NUKE:
-        from pyvfx.boilerplateinherited.exampleUI import myPlate
-        bpr = boilerplateUI.BoilerplateRunner(guiClass=myPlate, win_title='Myplate', win_object='myPlate')
-    if MAYA:
-        from pyvfx.boilerplateinherited.exampleUI import myPlate2
-        bpr = boilerplateUI.BoilerplateRunner(guiClass=myPlate2, win_title='Myplate2', win_object='myPlate2')
+    from pyvfx.boilerplateinherited.exampleUI import myPlate
+    bpr = boilerplateUI.BoilerplateRunner(guiClass=myPlate, win_title='Myplate', win_object='myPlate')
     bpr.run_main(dockable)
 
 

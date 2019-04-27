@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pyvfx.boilerplateinherited",
-    version="0.0.1",
+    version="0.0.2",
     author="Zachary Cole",
     author_email="zcole@nzaneproductions.com",
     description="An example inherited boilerplate Py* app that runs inside of Maya, Nuke, python2, or python3",

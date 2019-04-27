@@ -4,13 +4,6 @@ from Qt import QtCompat
 from pyvfx.boilerplate import boilerplateUI
 
 
-try:
-    from maya.app.general.mayaMixin import MayaQWidgetDockableMixin
-    MAYA = True
-except ImportError:
-    MAYA = False
-
-
 class myPlate(boilerplateUI.Boilerplate):
     def __init__(self, parent=None, win_title='defaultTitle', win_object='defaultObject'):
         super(myPlate, self).__init__(parent, win_title, win_object)
@@ -25,12 +18,6 @@ class myPlate(boilerplateUI.Boilerplate):
 
     def say_hello(self):
         print('Hello world!')
-
-
-if MAYA:
-    class myPlate2(MayaQWidgetDockableMixin, myPlate):
-        def __init__(self, parent=None, win_title='defaultTitle', win_object='defaultObject'):
-            super(myPlate, self).__init__(parent, win_title, win_object)
 
 
 if __name__ == "__main__":
