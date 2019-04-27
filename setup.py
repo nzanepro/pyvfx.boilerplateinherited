@@ -13,13 +13,16 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/nzanepro/pyvfx.boilerplateinherited",
     packages=setuptools.find_packages(),
+    scripts=[
+        'bin/pyvfx.boilerplateinheritedUI.sh',
+    ],
     package_data={
         "pyvfx.boilerplateinherited": ["resources/*.ui"],
     },
     install_requires=[
-                      'Qt.py',
-                      'pyvfx.boilerplate'
-                        ],
+        'Qt.py',
+        'pyvfx.boilerplate'
+    ],
     classifiers=[
         "Programming Language :: Python :: 2.7",
         "License :: OSI Approved :: MIT License",

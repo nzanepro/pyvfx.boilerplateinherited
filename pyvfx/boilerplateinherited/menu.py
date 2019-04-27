@@ -26,7 +26,7 @@ if NUKE:
     m.addCommand("pyvfx/inherited boilerplate UI dockable",
                  "import pyvfx.boilerplateinherited.menu\npyvfx.boilerplateinherited.menu.activate(True)")
 
-if MAYA:
+elif MAYA:
     MainMayaWindow = pm.language.melGlobals['gMainWindow']
     if not cmds.menu('pyvfxMenuItemRoot', exists=True):
         cmds.menu("pyvfxMenuItemRoot", label="pyvfx", parent=MainMayaWindow,
@@ -39,3 +39,6 @@ if MAYA:
     cmds.menuItem(label="inherited boilerplate UI dockable",
                   parent="pyvfxMenuItemRoot", ec=True,
                   command="import pyvfx.boilerplateinherited.menu\npyvfx.boilerplateinherited.menu.activate(True)")
+
+else:
+    activate()
