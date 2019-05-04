@@ -18,10 +18,3 @@ class myPlate(boilerplateUI.Boilerplate):
 
     def say_hello(self):
         print('Hello world!')
-
-
-if __name__ == "__main__":
-    bpr = boilerplateUI.BoilerplateRunner(guiClass=myPlate,
-                                          win_title='Myplate',
-                                          win_object='myPlate')
-    bpr.run_main()

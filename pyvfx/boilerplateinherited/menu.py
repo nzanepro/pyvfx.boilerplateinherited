@@ -16,7 +16,9 @@ except ImportError:
 def activate(dockable=False):
     from pyvfx.boilerplateinherited.exampleUI import myPlate
     bpr = boilerplateUI.BoilerplateRunner(guiClass=myPlate, win_title='Myplate', win_object='myPlate')
-    bpr.run_main(dockable)
+    kwargs = {}
+    kwargs["dockable"] = dockable
+    bpr.run_main(**kwargs)
 
 
 if NUKE:
